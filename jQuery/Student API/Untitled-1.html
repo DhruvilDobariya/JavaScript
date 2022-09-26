@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row m-3 justify-content-center">
+        <form id="form1" runat="server" class="col-md-5" id="form">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <asp:Label ID="Label1" runat="server" Text="Enter No 1:" CssClass="form-label"></asp:Label>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <asp:TextBox ID="txtNo1" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                    <asp:Label ID="msgNo1" runat="server" ForeColor="Red"></asp:Label>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <asp:Label ID="Label3" runat="server" Text="Enter Operator :" CssClass="form-label"></asp:Label>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <asp:TextBox ID="txtOperator" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:Label ID="msgOperator" runat="server" ForeColor="Red"></asp:Label>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <asp:Label ID="Label2" runat="server" Text="Enter No 2:" CssClass="form-label"></asp:Label>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <asp:TextBox ID="txtNo2" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
+                    <asp:Label ID="msgNo2" runat="server" ForeColor="Red"></asp:Label>
+                </div>
+                
+                <div class="col-md-6 d-flex justify-content-end">
+                    <asp:Button ID="btnCalculat" runat="server" OnClick="btnCalculat_Click" Text="Calculat" CssClass="" />
+                </div>
+                <div class="col-md-6">
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <asp:Label ID="Label4" runat="server" Text="Ans:" CssClass="form-label"></asp:Label>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <asp:TextBox ID="txtAns" runat="server" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+        </form>
+    </div>

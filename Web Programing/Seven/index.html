@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            function validate(){
+                var username = document.getElementById("username")
+                console.log("run");
+                var password = document.getElementById("password").value;
+                
+                /* if(username == null || password == ""){
+                    alert("invalid");
+                    return false;
+                } */
+            }
+        </script>
+    </head>
+    <body>
+        <form action="" name="myform" method="" onsubmit="return validate()">
+            <div>
+                Enter Username:
+                <input type="text" name="username" id="username">
+            </div>
+            <div>
+                Enter Password:
+                <input type="text" name="password" id="password">
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        
+    </body>
+    </html>

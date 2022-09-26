@@ -1,0 +1,53 @@
+.grid-container{
+    background-color: red;
+    display: grid;
+    grid-template-columns: 8em 8em 8em 8em; /* Item in one column and their size. */
+    grid-template-rows: 8em 8em 8em; /* Item in one row and their size. */
+    row-gap: 2em; /* gap between all rows. */
+    column-gap: 2em; /* gap between all columns. */
+}
+.grid-item{
+    background-color: aqua;
+}
+.item1{
+    /* For use item span horizontally. */
+    grid-column-start: 1; /* Give start grid-column-line number. */
+    grid-column-end: 3; /* Give end grid-column-line number. */
+    /*
+     *Also we can write this:
+     *grid-column: 1 / span 2; Here 1 is starting no. of grid-column-line and 2 is the reperesent that how many boxes, we want span. 
+    */
+}
+.item3{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    /* For use item span vertically. */
+    grid-row-start: 1; /* Give start grid-row-line number. */
+    grid-row-end: 3; /* Give end grid-row-line number. */
+    /*
+     *Also we can write this:
+     *grid-row: 1 / span 2; Here 1 is starting no. of grid-row-line and 2 is the reperesent that how many boxes, we want span. 
+    */
+}
+/*For position of items:
+ *For all items give horizontally positioning.
+ *justify-items: start;
+ *justify-items: center;
+ *justify-items: end;
+ *For all only one item give horizontally positioning.
+ *justify-self: start;
+ *justify-self: center;
+ *justify-self: end;
+ *For all items give vertically positioning.
+ *align-items: start;
+ *align-items: center;
+ *align-items: end;
+ *For only one item give vertically positioning.
+ *align-item: start;
+ *align-item: center;
+ *align-item: end;
+ *For all items give horizontally and vertically both positioning.
+ *place-items: center;
+ *For only one item give horizontally and vertically both positioning.
+ *place-self: center;
+*/

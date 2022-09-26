@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .out{
+            height: 70px;
+            font-size: 40px;
+        }
+        .in{
+            height: 70px;
+            width: 70px;
+        }
+        .cls{
+            height: 40px;
+            width: 100%;
+        }
+        .miniout{
+            height: 25px;
+            font-size: 20px;
+        }
+    </style>
+    <script src="Calculator.js"></script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4" id="minioutput" class="miniout"></td>
+        </tr>
+        <tr>
+            <td colspan="4" id="output" class="out"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="CS" onclick="screen('CS')" class="cls">
+            </td>
+            <td colspan="2">
+                <input type="button" value="⌫" onclick="screen('BS')" class="cls">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="add(7)" class="in">
+            </td>
+            <td>
+                <input type="button" value="8" onclick="add(8)" class="in">
+            </td>
+            <td>
+                <input type="button" value="9" onclick="add(9)" class="in">
+            </td>
+            <td>
+                <input type="button" value="/" onclick="operation('/')" class="in">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="add(4)" class="in">
+            </td>
+            <td>
+                <input type="button" value="5" onclick="add(5)" class="in">
+            </td>
+            <td>
+                <input type="button" value="6" onclick="add(6)" class="in">
+            </td>
+            <td>
+                <input type="button" value="X" onclick="operation('*')" class="in">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" onclick="add(1)" class="in">
+            </td>
+            <td>
+                <input type="button" value="2" onclick="add(2)" class="in">
+            </td>
+            <td>
+                <input type="button" value="3" onclick="add(3)" class="in">
+            </td>
+            <td>
+                <input type="button" value="-" onclick="operation('-')" class="in">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" onclick="add(0)" class="in">
+            </td>
+            <td>
+                <input type="button" value="." onclick="add('.')" class="in">
+            </td>
+            <td>
+                <input type="button" value="=" onclick="cal()" class="in">
+            </td>
+            <td>
+                <input type="button" value="+" onclick="operation('+')" class="in">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

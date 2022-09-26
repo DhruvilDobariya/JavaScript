@@ -1,0 +1,63 @@
+.flex-container{
+    display: flex;
+    border: 0.1em solid black;
+    height: 25em;
+    flex-direction: row;
+    /*flex-direction to used that, which direction give to rendered to flex items.
+     *In flex-direction, by default set as a row. 
+     *Other proparties of flex-direction.
+     *flex-direction: column;
+     *flex-direction: row-reverse;
+     *flex-direction: column-reverse;
+    */
+    justify-content: center;
+    /*justify-content used to give horizontal alignment of content.
+     *Other proparties of justify-content.
+     *justify-content: flex-start;
+     *justify-content: flex-end;
+     *justify-content: space-between;
+     *justify-content: space-around;
+     *justify-content: space-evenly;
+    */
+    align-items: center;
+    /*align-items used to give vertical alignment of flex items.
+     *Other proparties of align-items.
+     *align-items: flex-start;
+     *align-items: flex-end;
+     *align-items: stretch;
+     *align-items: baseline;
+    */
+    flex-wrap: wrap;
+    /*For use responsive.
+     *Other proparties.
+     *flex-wrap: wrap-reverse;
+    */
+}
+.flex-item{
+    background-color: red;
+    height: 4em;
+    width: 4em;
+    border: 0.2em solid black;
+    margin: 1em;
+    padding: 1em;
+}
+.item1{
+    order: 2;
+    /*In flexbox, by default all flex items order is 0.
+     *which item order high, it renderd last position.
+    */
+}
+.item2{
+    flex-grow: 2;
+    /*In flexbox, by default all flex items flex-grow is 0.
+     *If we incresed flex-grow, then we will have two posibilities.
+     *1)If flex-direction is row or row-reverse, then incresed size in horizontally(width).
+     *2)If flex-direction is column or column-reverse, then incresed size in vertically(height).
+    */
+}
+.item3{
+    flex-grow: 4;
+}
+.item4{
+    order: 4;
+}

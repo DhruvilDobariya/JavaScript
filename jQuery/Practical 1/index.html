@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        html, body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .out{
+            height: 70px;
+            font-size: 40px;
+        }
+        .in{
+            height: 70px;
+            width: 70px;
+        }
+        .cls{
+            height: 40px;
+            width: 100%;
+        }
+        .miniout{
+            height: 25px;
+            font-size: 20px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="Calculator.js"></script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4" id="minioutput" class="miniout"></td>
+        </tr>
+        <tr>
+            <td colspan="4" id="output" class="out"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="button" class="cls">CS</button>
+            </td>
+            <td colspan="2">
+                <button type="button" class="cls">⌫</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="7" class="in">
+            </td>
+            <td>
+                <input type="button" value="8" class="in">
+            </td>
+            <td>
+                <input type="button" value="9" class="in">
+            </td>
+            <td>
+                <input type="button" value="/" class="in">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="4" class="in">
+            </td>
+            <td>
+                <input type="button" value="5" class="in">
+            </td>
+            <td>
+                <input type="button" value="6" class="in">
+            </td>
+            <td>
+                <input type="button" value="X" class="in">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" class="in">
+            </td>
+            <td>
+                <input type="button" value="2" class="in">
+            </td>
+            <td>
+                <input type="button" value="3" class="in">
+            </td>
+            <td>
+                <input type="button" value="-" class="in">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="0" class="in">
+            </td>
+            <td>
+                <input type="button" value="." o class="in">
+            </td>
+            <td>
+                <input type="button" value="=" class="in">
+            </td>
+            <td>
+                <input type="button" value="+" class="in">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

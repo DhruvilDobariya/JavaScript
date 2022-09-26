@@ -1,0 +1,35 @@
+			.font{
+				font-size: 20px;
+			}
+			.page{
+				background-color: rgb(229,229,229);
+				padding: 20px;
+			}
+			.header{
+				background-color: rgb(208,255,221);
+			}
+			.content{
+				background-color: rgb(255,159,161);
+				height: 375px;
+				padding: 20px;
+			}
+			.entry,.sidebar{
+				background-color: rgb(164,228,255);
+				
+			}
+			.entry{
+				width: 60%;
+				height: 75px;
+				margin: 20px;
+				float: left;
+			}
+			.sidebar{
+				width: 30%;
+				height: 305px;
+				float: right;
+				margin-top: 20px;
+				margin-right: 40px;
+			}
+			.footer{
+				background-color: rgb(255,255,0);
+			}

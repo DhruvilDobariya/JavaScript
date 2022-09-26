@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <script>
+        a = parseInt(prompt("Enter a first number"));
+        b = parseInt(prompt("Enter a second number"));
+        c = parseInt(prompt("Enter a third number"));
+        if(a > b && a > c){
+            document.write(a + " is largest number");
+        }
+        else if(b > a && b > c){
+            document.write(b + " is largest number");
+        }
+        else if(c > a && c > b){
+            document.write(c + " is largest number");
+        }
+        else if(a == b && a > c){
+            document.write(a + " and "+ b + " both is largest number");
+        }
+        else if(b == c && b > a){
+            document.write(b + " and "+ c + " both is largest number");
+        }
+        else if(a == c && a > b){
+            document.write(a + " and "+ c + " both is largest number");
+        }
+        else{
+            document.write(a + ", "+ b + " and " + c + " all are equal number.");
+        }
+    </script>
+</body>
+</html>

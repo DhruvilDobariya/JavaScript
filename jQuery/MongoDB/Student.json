@@ -1,0 +1,390 @@
+Create Databse : use DatabseName
+Switch DataBase : use DatabaseName
+Create Colletion : db.createCollection("CollectionName")
+See collection : show collections
+Now we use student collection:
+Insert one document Document : db.student.insert({
+    RollNo:1,
+    Name:"Dhruvil Dobariya",
+    Mobile:8589573989,
+    Email:"dhruvildobariya@gmail.com"
+})
+Insert Maltipale Value in Document : db.student.insert({
+    RollNo:2,
+    Name:"Dhaval Dobariya",
+    Mobile:[8749974689,8469949579],
+    Email:"dhavaldobariya@gmail.com"
+})
+OR
+db.student.insertOne({
+    RollNo:2,
+    Name:"Dhaval Dobariya",
+    Mobile:[8749974689,8469949579],
+    Email:"dhavaldobariya@gmail.com"
+})
+Insert Maltiple Document in one query : db.student.insertMany([
+    {
+        RollNo:3,
+        Name:"Bhargav Vachchani",
+        Mobile:8589573989,
+        Email:"bhargavvachchani@gmail.com"
+    },
+    {
+        RollNo:4,
+        Name:"Dhruv Rathod",
+        Mobile:8589573989,
+        Email:"dhruvrathod@gmail.com"
+    }
+])
+if we insert blank document then we can insert document like this : db.student.insert({})
+Show document of collection : db.student.find().pretty()
+Show Count of documnet : db.student.find().count()
+Show First Document of Collection : db.student.findOne()
+Use Where 
+    Equal : db.student.find({<key>}:{$eq:<value>}) OR db.student.find(<key> : <value>)
+    Not equal : db.student.find({<key>}:{$ne:<value>})
+    
+
+we also insert record without create collection, when we insert record mongoDB do auto generete collection.
+like we asume that we haven't faculty collection then we insert record : db.faculty.insert({
+    FacultyId : 1,
+    Name:"Arjun Bala",
+    Mobile:8589573989,
+    Email:"arjunbala@gmail.com"
+})
+
+Student
+{
+    RollNo:1,
+    Name:"Dhruvil Dobariya",
+    Mobile:8589573989,
+    Email:"dhruvildobariya@gmail.com"
+},
+{
+    RollNo:2,
+    Name:"Dhaval Dobariya",
+    Mobile:[8749974689,8469949579],
+    Email:"dhavaldobariya@gmail.com"
+},
+{
+    RollNo:2,
+    Name:"Dhaval Dobariya"
+},
+{
+    RollNo:2,
+    Name:"Dhaval Dobariya",
+    city:"Rajkot"
+}
+{
+    RollNo:3,
+    Name:"Bhargav Vachchani",
+    Mobile:8589573989,
+    Email:"bhargavvachchani@gmail.com"
+},
+{
+    RollNo:4,
+    Name:"Dhruv Rathod",
+    Mobile:8589573989,
+    Email:"dhruvrathod@gmail.com"
+}
+
+Facuty
+{
+    FacultyId : 1,
+    Name:"Arjun Bala",
+    Mobile:8589573989,
+    Email:"arjunbala@gmail.com"
+}
+
+First
+{
+    Student : 1022,
+    Advisor : 10,
+    AdvisorFName : "Susan",
+    AdvisorLName : "Jones",
+    AdvisorRoom : 412,
+    Class : ["101-07","143-01","159-02"]
+},
+{
+    Student : 4123,
+    Advisor : 12,
+    AdvisorFName : "Anne",
+    AdvisorLName : "Smith",
+    AdvisorRoom : 216,
+    Class : ["101-07","159-02","214-01"]
+}
+
+Second
+{
+    Employee : "Jones",
+    Skill : ["Typing","Shorthand","Whittling"],
+    CurruntWorkLocation : "144 Main Street"
+},
+{
+    Employee : "Jones",
+    Skill : "Light Cleaning",
+    CurruntWorkLocation : "73 Industrial Way"
+},
+{
+    Employee : "Ellis",
+    Skill : ["Alchemy","Juggling"],
+    CurruntWorkLocation : "73 Industrial Way"
+},
+{
+    Employee : "Herrison",
+    Skill : "Light Cleaning",
+    CurruntWorkLocation : "73 Industrial Way"
+}
+
+Third
+{
+    EmployeeId : 1003,
+    SalesPerson : "Mary Smith",
+    SalesOfiice : "Chicago",
+    OfficeNumber : "312-555-1212",
+    Customer : [
+        {
+            CustomerId : "C1000",
+            CustomerName : "Ford",
+            CustomerCitty : "Dearborn",
+            PostalCode : 48123
+        },
+        {
+            CustomerId : "C1010",
+            CustomerName : "GM",
+            CustomerCitty : "Detroit",
+            PostalCode : 48123
+        }
+    ]
+},
+{
+    EmployeeId : 1004,
+    SalesPerson : "John Hunt",
+    SalesOfiice : "New York",
+    OfficeNumber : "212-555-1212",
+    Customer : [
+        {
+            CustomerId : "C1020",
+            CustomerName : "Dell",
+            CustomerCitty : "Austin",
+            PostalCode : 78720
+        },
+        {
+            CustomerId : "C1030",
+            CustomerName : "HP",
+            CustomerCitty : "Palo Alto",
+            PostalCode : 94303
+        },
+        {
+            CustomerId : "C1040",
+            CustomerName : "Apple",
+            CustomerCitty : "Cupertino",
+            PostalCode : 95014
+        }
+    ]
+},
+{
+    EmployeeId : 1005,
+    SalesPerson : "Martin Hap",
+    SalesOfiice : "Chicago",
+    OfficeNumber : "312-555-1212",
+    Customer : [
+        {
+            CustomerId : "C1050",
+            CustomerName : "Boeing",
+            CustomerCitty : "Chicago",
+            PostalCode : 60601
+        }
+    ]
+}
+
+Sixth
+{
+    _id : 1,
+    first_name : "Paul",
+    surname : "Miller",
+    cell : "447557505611",
+    city : "London",
+    location_x : "45.123",
+    location_y : "45.123",
+    Profession : ["banking","finance","trader"],
+    Car : [
+        {
+            ID : 20,
+            model : "Bentley",
+            year : "1993"
+        },
+        {
+            ID : 21,
+            model : "Rolls Royce",
+            year : "1965"
+        }
+    ]
+}
+
+Assignment 4 :
+1)use BANK_INFO
+
+2)
+{
+    ACTNO : 101,
+    CNAME : "ANIL",
+    BNAME : "VRCE",
+    AMOUNT : 1000.00,
+    ADATE : "1-3-95",
+    CCITY: "CALCUTTA",
+    BCITY: "NAGPUR",
+    LOAN: [
+        {LOANNO: "201",LBNAME: "VRCE",LAMOUNT: "1000"
+        },
+        {LOANNO: "205",LBNAME: "NEHRU PLACE",LAMOUNT: "3000"
+        }
+    ]
+},
+{
+    ACTNO: 102,
+    CNAME: "SUNIL",
+    BNAME: "AJNI",
+    CCITY: "NAGPUR",
+    BCITY: "DELHI",
+    AMOUNT: 5000,
+    ADATE: "4-1-96",
+    LOAN: [
+        {LOANNO: "311",LBNAME: "DHARAMPETH",LAMOUNT: "3000"
+        }
+    ]
+},
+{
+    ACTNO: 103,
+    CNAME: "MEHUL",
+    BNAME: "KAROLBAGH",
+    CCITY: "DELHI",
+    BCITY: "BARODA",
+    AMOUNT: 3500,
+    ADATE: "17-11-95",
+    LOAN: [
+        {LOANNO: "206 ",LBNAME: "DHARAMPETH",LAMOUNT: "3000"
+        }
+    ]
+},
+{
+    ACTNO: 104,
+    CNAME: "MADHURI",
+    BNAME: "CHANDI",
+    CCITY: "DELHI",
+    BCITY: "NAGPUR",
+    AMOUNT: 1200,
+    ADATE: "17-12-95",
+    LOAN: [
+        {LOANNO: "321",LBNAME: "ANDHERI",LAMOUNT: "2000"
+        }
+    ]
+},
+{
+    ACTNO: 105,
+    CNAME: "PRMOD",
+    BNAME: "M.G. ROAD ",
+    CCITY: "BANGLORE",
+    BCITY: "NAGPUR",
+    AMOUNT: 3000,
+    ADATE: "27-3-96",
+    LOAN: [
+        {LOANNO: "375",LBNAME: "VIRAR",LAMOUNT: "8000"
+        }
+    ]
+},
+{
+    ACTNO: 106,
+    CNAME: "SANDIP",
+    BNAME: "ANDHERI",
+    CCITY: "BOMBAY",
+    BCITY: "SURAT",
+    AMOUNT: 2000,
+    ADATE: "31-3-96"
+},
+{
+    ACTNO: 107,
+    CNAME: "SHIVANI",
+    BNAME: "VIRAR",
+    CCITY: "BOMBAY",
+    BCITY: "BOMBAY",
+    AMOUNT: 1000,
+    ADATE: "5-9-95"
+},
+{
+    ACTNO: 108,
+    CNAME: "KRANTI",
+    BNAME: "NEHRUPLACE",
+    CCITY: "DELHI",
+    BCITY: "BOMBAY",
+    AMOUNT: 5000,
+    ADATE: "2-7-95"
+},
+{
+    ACTNO: 109,
+    CNAME: "MINU",
+    BNAME: "POWAI",
+    CCITY: "BOMBAY",
+    AMOUNT: 7000,
+    ADATE: "10-8-95"
+},
+{
+CNAME: "MANDAR",
+CITY: "PATNA"
+},
+{
+CNAME: "NAREN",
+CITY: "BOMBAY"
+}
+
+3.  db.BankDetails.find()
+
+4.  db.BankDetails.find().pretty()
+
+5.  db.BankDetails.findOne()
+
+6.  db.BankDetails.find({ACTNO:101}).pretty()
+
+7.  db.BankDetails.find({ACTNO:{$gt:101}}).pretty()
+
+8.  db.BankDetails.find({$and:[{ACTNO:{$gt:101}},{CNAME:"Arjun"}]})
+
+9.  db.BankDetails.find({ACTNO:{$in:[105,108]}}).pretty()
+
+10. db.BankDetails.find({ACTNO:{$not:{$gt:105}}}).pretty()
+
+11. db.BankDetails.find({},{CNAME:1,CCITY:1,BNAME:1,AMOUNT:1}).pretty()
+
+12. db.BankDetails.find({BCITY:{$eq:"NAGPUR"}},{CNAME:1,CCITY:1,BNAME:1,AMOUNT:1}).pretty()
+
+13. db.BankDetails.find().sort({CNAME:1}).pretty()
+		&
+    db.BankDetails.find().sort({AMOUNT:-1}).pretty()
+
+14. db.BankDetails.find().limit(2).pretty()
+
+15. db.BankDetails.find().skip(3).pretty()
+
+16. db.BankDetails.find().count()
+
+17. db.BankDetails.find({CNAME:/^s/i}).pretty()  
+
+18. db.BankDetails.find({$or:[{CNAME:/^s/i},{CNAME:/^m/i}]}).pretty()
+
+19. db.BankDetails.find({CNAME:/^a..../i}).pretty() 
+
+20. db.BankDetails.find({CNAME:/[a-m]/i}).pretty() 
+
+21. db.BankDetails.aggregate([
+                               {$group:{_id:null,total:{$sum:"$AMOUNT"}}}
+                             ])
+
+22. db.BankDetails.aggregate([
+                              {$group:{_id:"$BNAME",total:{$sum:"$AMOUNT"}}}
+                            ])
+
+23. db.BankDetails.update({CNAME:"ANIL"},{$set:{CNAME:"ARJUN",BNAME:"NEW"}})
+
+24. db.BankDetails.deleteOne({BNAME:"NEW"})
+
+25. db.dropDatabase() 
